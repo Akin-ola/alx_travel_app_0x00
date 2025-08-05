@@ -1,5 +1,5 @@
-import os
-import environ 
+import environ
+import os 
 """
 Django settings for alx_travel_app project.
 
@@ -47,12 +47,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'restframework',
-    'django-cors-headers',
-
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'alx_travel_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.MySQL',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': env('db_name'),
         'USER': env('db_user'),
         'HOST': env('db_host'),
