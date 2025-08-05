@@ -1,1 +1,1 @@
-This is a file for the documentation of this project.
+This is sub readme file for management commands

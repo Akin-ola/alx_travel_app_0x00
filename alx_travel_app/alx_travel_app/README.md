@@ -1,1 +1,0 @@
-This is sub readme file for management commands
